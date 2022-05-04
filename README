@@ -1,5 +1,5 @@
 This is an example of remote signal slot interactions using
-Cute server (cuteserver.io).
+Cute server (https://cuteserver.io).
 
 Cute server extends Qt's signals and slots to network apps.
 
