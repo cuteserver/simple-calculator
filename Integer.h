@@ -12,11 +12,10 @@
 #include <CuteClient.h>
 #endif
 
+using namespace Cute;
+
 #include <QMetaType>
 
-
-namespace Cute::Tests
-{
 
 class Integer
 {
@@ -37,8 +36,6 @@ private:
 DataStream &operator<<(DataStream &stream, const Integer &i);
 DataStream &operator>>(DataStream &stream, Integer &i);
 
-}
-
-Q_DECLARE_METATYPE(Cute::Tests::Integer)
+Q_DECLARE_METATYPE(Integer)
 
 #endif // CUTE_TESTS_INTEGER_H

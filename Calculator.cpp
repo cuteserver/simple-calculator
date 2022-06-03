@@ -5,19 +5,17 @@
 
 #include "Calculator.h"
 
-REGISTER_REMOTE_OBJECT("/calculator", Cute::Tests::Calculator);
+REGISTER_REMOTE_OBJECT("/calculator", Calculator);
 
-
-namespace Cute::Tests
-{
 
 qint32 Calculator::addIntegers(qint32 a, qint32 b)
 {
-    qWarning("Requester info: IP:%s, Port:%d.",
-             m_connectionInformation->peerIp().toUtf8().constData(),
-             m_connectionInformation->peerPort());
-    emit addedIntegers(Integer(a), Integer(b), Integer(a+b));
-    return a+b;
-}
-
+    if ((a > 0 && b > 0 && (a+b) < 0)
+        || (a < 0 && b < 0 && (a+b) > 0))
+    {
+        emit overflow(Integer(a), Integer(b));
+        return -1;
+    }
+    else
+        return a+b;
 }

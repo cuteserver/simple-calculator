@@ -1,7 +1,6 @@
-This is an example of remote signal slot interactions using
-Cute server (https://cuteserver.io).
-
-Cute server extends Qt's signals and slots to network apps.
+This is an example showcasing how the Cute server (https://cuteserver.io)
+enables developers to implement network-based communications using Qt's signals
+and slots.
 
 Detailed instructions about how to build this project is given at:
 

@@ -10,27 +10,19 @@
 #include <CuteServer.h>
 #include <QSharedPointer>
 
-namespace Cute::Tests
-{
-
 class Calculator : public QObject
 {
 Q_OBJECT
 public:
-    explicit Calculator(QSharedPointer<Cute::IConnectionInformation> connectionInformation)
-        : m_connectionInformation(connectionInformation) {}
+    explicit Calculator(QSharedPointer<Cute::IConnectionInformation> ci)
+    {Q_UNUSED(ci)}
     ~Calculator() override = default;
 
 public slots:
     REMOTE_SLOT qint32 addIntegers(qint32 a, qint32 b);
 
 signals:
-    REMOTE_SIGNAL void addedIntegers(Cute::Tests::Integer a, Cute::Tests::Integer b, Cute::Tests::Integer sum);
-    
-private:
-    QSharedPointer<Cute::IConnectionInformation> m_connectionInformation;
+    REMOTE_SIGNAL void overflow(Integer a, Integer b);
 };
-
-}
 
 #endif // CALCULATOR_H

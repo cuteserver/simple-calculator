@@ -5,10 +5,8 @@
 
 #include "Integer.h"
 
-int Cute::Tests::Integer::m_metaTypeId = Cute::registerType<Cute::Tests::Integer>();
+int Integer::m_metaTypeId = Cute::registerType<Integer>();
 
-namespace Cute::Tests
-{
 
 Integer::Integer()
 {
@@ -48,6 +46,4 @@ DataStream &operator>>(DataStream &stream, Integer &i)
     stream >> readValue;
     i = Integer(readValue);
     return stream;
-}
-
 }
