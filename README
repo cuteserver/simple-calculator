@@ -1,7 +1,6 @@
-This is an example showcasing how the Cute server (https://cuteserver.io)
-enables developers to implement network-based communications using Qt's signals
-and slots.
+The simple-calculator repo showcases how the Cute server (https://cuteserver.io)
+enables developers to implement network-based communications using Qt's signals and
+slots.
 
-Detailed instructions about how to build this project is given at:
-
-https://cuteserver.io/learn/calculator-tutorial.html
+The simple calculator tutorial (https://cuteserver.io/learn/calculator-tutorial.html)
+shows how to build the assets in this repo.
